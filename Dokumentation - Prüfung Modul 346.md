@@ -109,3 +109,5 @@ Danach Service neustarten
 ```linux
 sudo service ssh restart
 ```
+
+Zum testen muss man auf der Ubuntu VM den Dateinamen "authorized_keys"  abändern zu etwas anderem

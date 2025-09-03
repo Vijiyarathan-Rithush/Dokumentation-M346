@@ -8,6 +8,7 @@ Riethuesli>12345
 # 1. Hole die VM's
 
 ## LP-22.04
+PFAD IN LABORRECHNER EINGEBEN
 ```pfad
 C:\VMs\LP-22.04
 ```
@@ -40,18 +41,19 @@ C:\VMs\WP1-22H2
 ```
 
 ### Befehle:
+BEFEHLE IN WINDOWS EINGEBEN
 ```windows
 ping 192.168.210.22
 ```
 
-```linux
+```windows
 ping www.gbssg.ch
 ```
 
 ---
 
 # 3. SSH-Server download
-
+BEFEHLE IN LINUX EINGEBEN
 ```linux
 sudo apt-get update
 ```
@@ -67,7 +69,7 @@ sudo service ssh status
 ---
 
 # 4. SSH-Verbindung mit Passwort
-
+BEFEHLE IN WINDOWS EINGEBEN
 ```ssh
 ssh-keygen
 ```
@@ -81,7 +83,7 @@ ssh vmadmin@192.168.210.22
 # 5. SSH-Verbindung mit publickey
 
 Gebe folgenden Befehl ein:
-
+BEFHEL IN WINDOWS EINGEBEN
 ```windows
 scp C:\Users\vmadmin\.ssh\id_rsa.pub vmadmin@192.168.210.22:~/.ssh/authorized_keys
 ```
@@ -89,7 +91,7 @@ scp C:\Users\vmadmin\.ssh\id_rsa.pub vmadmin@192.168.210.22:~/.ssh/authorized_ke
 ---
 
 # 6. Testen und Zugang
-
+BEFEHL IN WINDOWS EINGEBEN
 ```windows
 ssh -i C:\Users\vmadmin\.ssh\id_rsa vmadmin@192.168.210.22
 ```
@@ -97,11 +99,11 @@ ssh -i C:\Users\vmadmin\.ssh\id_rsa vmadmin@192.168.210.22
 ---
 
 # 7. Passwort deaktivieren
-
+BEFEHL IN LINUX EINGEBEN
 ```linux
 sudo nano /etc/ssh/sshd_config
 ```
-
+IN LINUX FORTFAHREN
 Suche nach **PasswordAuthentication** und setze den wert auf no und entferne den #
 
 Danach Service neustarten
@@ -109,5 +111,7 @@ Danach Service neustarten
 ```linux
 sudo service ssh restart
 ```
-
+IN LINUX DEN DATEINAMEN ÄNDERN 
 Zum testen muss man auf der Ubuntu VM den Dateinamen "authorized_keys"  abändern zu etwas anderem
+
+TESTE DANACH DIE VERBINDUNG AUF WINDOWS

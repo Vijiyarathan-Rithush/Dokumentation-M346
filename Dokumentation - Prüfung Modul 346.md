@@ -73,7 +73,7 @@ ssh-keygen
 ```
 
 ```windows
-ssh vmadmin@192.168.210.222
+ssh vmadmin@192.168.210.22
 ```
 
 ---
@@ -102,7 +102,7 @@ ssh -i C:\Users\vmadmin\.ssh\id_rsa vmadmin@192.168.210.22
 sudo nano /etc/ssh/sshd_config
 ```
 
-Suche nach **PasswordAuthentication** und entferne den #
+Suche nach **PasswordAuthentication** und setze den wert auf no und entferne den #
 
 Danach Service neustarten
 
